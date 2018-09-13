@@ -1,12 +1,12 @@
 pipeline {
   agent any
   stages {
-    stage('skip-on-restart') {
+    stage('step1:build') {
       steps {
         echo 'This shouldn\'t show up on second run'
       }
     }
-    stage('restart') {
+    stage('step2:test') {
       steps {
         script {
           if (currentBuild.getNumber() % 2 == 1) {
@@ -18,7 +18,7 @@ pipeline {
 
       }
     }
-    stage('post-restart') {
+    stage('step3:deploy to prod') {
       steps {
         echo 'Now we\'re post-restart'
       }
