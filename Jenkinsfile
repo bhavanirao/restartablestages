@@ -20,7 +20,7 @@ pipeline {
     }
     stage('stage3:deploy to prod') {
       steps {
-        echo 'Now we\'re post-restart'
+        echo 'Now we\'re deployed successfuly'
       }
     }
   }
