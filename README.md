@@ -1,1 +1,1 @@
-# Copy from Pipeline PM on how to restart a declarative pipeline stage
+#  Restart a declarative pipeline stage
